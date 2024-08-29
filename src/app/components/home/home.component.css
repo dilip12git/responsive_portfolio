@@ -1,0 +1,101 @@
+
+.container{
+    padding: 0px 12px;
+}
+.title-txt{
+ color: aliceblue;
+font-weight: 600;
+}
+
+.main-title{
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 2px;
+    
+}
+header{
+    margin-bottom: 30px;
+}
+.main-title::after {
+    content: ''; 
+    display: block;
+    width: 80px;
+    height: 4px; 
+    border-radius: 4px;
+    background: hsl(45, 100%, 72%); 
+    margin-top: 10px;
+  }
+  h2{
+    color: aliceblue;
+  }
+
+.dev_name{
+    color: hsl(45, 100%, 72%); 
+    font-style: italic;
+    font-weight: 400;
+}
+p,b{
+    color: hsl(0, 0%, 96%);
+    font-size: 15px;
+    font-weight: 280;
+  
+}
+
+.skills_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px 25px;
+    width: 100%;
+}
+.skils_card{
+    flex: 1 1 45%;
+    position: relative;
+    background: linear-gradient(
+        to bottom right, 
+        hsl(0, 0%, 25%) 0%, 
+        hsla(0, 0%, 25%, 0) 50%
+      );
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 10px;
+  }
+  
+  .skils_card::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(
+        to bottom right, 
+        hsla(240, 1%, 18%, 0.251) 0%, 
+        hsla(240, 2%, 11%, 0) 100%
+      ), hsl(240, 2%, 13%);
+    border-radius: inherit;
+    z-index: -1;
+    
+  }
+
+
+ .skills_info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+ }
+
+ .skill_title{
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(0, 0%, 96%);
+ }
+
+ .skill_desc{
+    font-size: 14px;
+    font-weight: 280;
+    color: hsl(0, 0%, 80%);
+ }

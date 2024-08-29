@@ -1,0 +1,55 @@
+<div class="container">
+    <header><span class="main-title">Contact</span></header>
+    <section class="mapbox" data-mapbox>
+        <!-- <figure> -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.2687166825336!2d80.1605419!3d12.9029074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f16d7039013%3A0xd04b7f26ebdf7b4a!2sRainbow%20Apartment!5e0!3m2!1sen!2sin!4v1724835403728!5m2!1sen!2sin"
+            width="600"
+             height="450" 
+             loading="lazy"
+              style="border: 0;">
+            </iframe>
+        
+        <!-- </figure> -->
+    </section>
+
+    <section class="contact-form">
+        <h3 class="h3 form-title">Send a Message</h3>
+
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate novalidate>
+            <div class="input-wrapper">
+                <div class="input-group">
+                    <input type="text" name="fullname" class="form-input" placeholder="Full name" [(ngModel)]="userName"
+                        #nameInput="ngModel" required />
+
+
+                    <input type="email" name="email" class="form-input" placeholder="Email address"
+                        [(ngModel)]="userEmail" #emailInput="ngModel" required email />
+
+                </div>
+                <textarea name="message" class="form-input" placeholder="Your Message" [(ngModel)]="message"
+                    #messageInput="ngModel" required></textarea>
+                <div class="error-container">
+                    <span *ngIf="emailInput.invalid && emailInput.touched" class="error-message">
+                        Valid email is required.
+                    </span>
+                    <span *ngIf="nameInput.invalid && nameInput.touched" class="error-message">
+                        Name is required.
+                    </span>
+                    <span *ngIf="messageInput.invalid && messageInput.touched" class="error-message">
+                        Message is required.
+                    </span>
+
+                    <span *ngIf="success" class="success-msg">
+                        Message sent successfully !
+                    </span>
+                </div>
+            </div>
+
+            <button class="form-btn" type="submit" [disabled]="contactForm.invalid">
+                <fa-icon [icon]="faLocationArrow"></fa-icon>
+                <span>Send Message</span>
+            </button>
+        </form>
+    </section>
+</div>

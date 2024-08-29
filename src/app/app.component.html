@@ -1,0 +1,114 @@
+<main>
+  <aside class="sidebar" [ngClass]="{'active': isSidebarActive}">
+    <div class="sidebar-info">
+      <figure class="avatar-box">
+        <img src="../assets/img/dilip-img.png" alt="Dilip Kumar Teli" width="80" style="border-radius: 20%;" />
+      </figure>
+
+      <div class="info-content">
+        <span class="name" title="Dilip Kumar Teli">Dilip Kumar Teli</span>
+        <p class="title">Web and Mobile App Developer</p>
+      </div>
+
+      <button class="info_more-btn" (click)="toggleInfoVisibility()">
+        <span>Show Contacts</span>
+        <fa-icon [icon]="faChevronDown" class="fa-chervon-icon"></fa-icon>
+      </button>
+    </div>
+    <div class="sidebar-info_more"  [ngClass]="{'active': isSidebarActive}">
+      <div class="separator"></div>
+
+      <div class="contacts-list">
+        <div class="contact-item">
+          <div class="icon-box">
+            <fa-icon [icon]="faEnvelope" class="fa-email-icon"></fa-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <span class="contact-link">dilipg44u&#64;gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">
+            <fa-icon [icon]="faPhone" class="fa-phone-icon"></fa-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Phone</p>
+            <span class="contact-link">+91 7991907185</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">
+            <fa-icon [icon]="faCalendar" class="fa-calendar-icon"></fa-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Date of Birth</p>
+
+            <time datetime="2001-05-25">May 25, 2003</time>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">
+            <fa-icon [icon]="faLocation" class="fa-location-icon"></fa-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Chenai, Tamilnadu, India</address>
+          </div>
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="social-list">
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/dilipgpta/" target="_blank" class="social-link">
+            <fa-icon [icon]="linkedin" class="fa-location-icon"></fa-icon>
+          </a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.facebook.com/dilip8513gupta" class="social-link" target="_blank">
+            <fa-icon [icon]="facebook" class="fa-location-icon"></fa-icon>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a href="https://www.instagram.com/dilipgupta_4u" class="social-link" target="_blank">
+            <fa-icon [icon]="insta" class="fa-location-icon"></fa-icon>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a href="https://github.com/dilip12git" class="social-link" download>
+            <fa-icon [icon]="github" class="fa-location-icon"></fa-icon>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <nav class="navbar">
+      <button class="navbar-link " routerLinkActive="active_nav" routerLink=""
+        [routerLinkActiveOptions]="{ exact: true }">About</button>
+      <button class="navbar-link " routerLinkActive="active_nav" routerLink="projects"
+        [routerLinkActiveOptions]="{ exact: true }">Projects</button>
+      <button class="navbar-link" routerLinkActive="active_nav" routerLink="resume"
+        [routerLinkActiveOptions]="{ exact: true }">Resume</button>
+      <button class="navbar-link" routerLinkActive="active_nav" routerLink="contact"
+      [routerLinkActiveOptions]="{ exact: true }">Contact</button>
+    </nav>
+    <article>
+      <router-outlet></router-outlet>
+    </article>
+
+  </div>
+</main>
