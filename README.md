@@ -1,9 +1,9 @@
-#Responsive Portfolio Built with Angular
+# Responsive Portfolio Built with Angular
 Overview:
 
 This responsive portfolio showcases the power of Angular in creating dynamic, modern, and visually appealing web applications. Designed to highlight professional achievements, projects, and skills, this portfolio demonstrates a clean and user-friendly interface, optimized for both desktop and mobile devices.
 
-#Features:
+# Features:
 
 Responsive Design: Utilizes Angular's flexible layout system and CSS media queries to ensure seamless viewing experiences across various devices, including desktops, tablets, and smartphones.
 Interactive Components: Employs Angular's robust component-based architecture to deliver interactive elements, such as dynamic project galleries, smooth navigation, and engaging user interfaces.
@@ -13,7 +13,8 @@ Single Page Application (SPA): Implements Angular's SPA capabilities to provide 
 Customizable Themes: Features a customizable design with various themes and color schemes, allowing users to tailor the look and feel to their personal preferences or branding needs.
 SEO-Friendly: Incorporates Angular Universal for server-side rendering (SSR), improving search engine optimization (SEO) and ensuring better visibility for search engines.
 Email Integration: Utilizes EmailJS, a third-party API service, to handle email communications directly from the portfolio. This feature enables users to send messages, inquiries, or contact forms seamlessly without needing a backend server.
-#Technologies Used:
+
+# Technologies Used:
 
 Angular: For building a component-based architecture and handling dynamic content.
 HTML/CSS: To create a responsive and visually appealing layout.
