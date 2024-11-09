@@ -44,7 +44,7 @@ p,b{
 
 .skills_container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px 25px;
     width: 100%;
 }
@@ -65,6 +65,19 @@ p,b{
     justify-content: flex-start;
     align-items:center;
     gap: 10px;
+  }
+  @media (max-width:500px){
+    .skils_card{
+    flex-direction: column;
+    justify-content: center;
+
+
+    }
+    .skills_info{
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+   }
   }
   
   .skils_card::before {

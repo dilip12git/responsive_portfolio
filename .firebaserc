@@ -1,9 +1,5 @@
 {
   "projects": {
-    "default": "portfolio-2deea",
-    "dilip-portfolio": "dilip-kumar-portfolio"
-  },
-  "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+    "default": "dilip-kumar-portfolio"
+  }
 }

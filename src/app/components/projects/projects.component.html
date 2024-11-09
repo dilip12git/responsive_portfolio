@@ -1,80 +1,44 @@
 <div class="container">
-    <header><span class="main-title">My Projects</span></header>
-    <p>A selection of projects that showcase my skills and expertise in web and Android app development. Each project
-        reflects my commitment to creating user-friendly, innovative solutions and demonstrates my ability to tackle
-        diverse challenges.</p>
-    <br>
-    <h3>Web Projects</h3>
-    <div class="priject_container">
-        <div class="projects-card">
-            <span class="p-title">Tutdocs</span>
-            <p>An engaging web application designed to exchange the study materials among different institutions
-                students.</p>
-            <ul type="square">
-                <li>Key Technologies:</li>
-                <span class="desc">JavaScript framework (AngularJs) and for Back-end PHP</span>
-
-                <li>Database Used:</li>
-                <span class="desc">SQL (MySQL)</span>
-                <li>GitHub Link:</li>
-                <span class="desc"><a href="https://github.com/dilip12git/tutdocs" target="_blank">Tutdocs</a></span>
-            </ul>
-            <b>Features:</b>
-            <span class="desc">You can easily upload and download study materials, follow and like content, and leave
-                reviews. Additionally, you can log in directly using your email or with Google One Tap for a seamless
-                experience.</span>
-        </div>
-
-        <div class="projects-card">
-            <span class="p-title">Softnote</span>
-            <p>A web application where you can get all programming languages courses and projects of beginner level.</p>
-            <ul type="square">
-                <li>Key Technologies:</li>
-                <span class="desc">JavaScript framework (AngularJs) and for Back-end PHP</span>
-                <li>Database Used:</li>
-                <span class="desc">SQL (MySQL)</span>
-             
-            </ul>
-            <b>Features:</b>
-            <span class="desc">Responsive design, interactive elements and you can easily download the source code of
-                projects and also you can share the web pages as a PDF</span>
+    <header><span class="main-title">Projects</span></header>
+    <div class="projects">
+        <div class="project-item" *ngFor="let item of items">
+            <div class="project-img" (click)="viewDetail(item)">
+                <img [src]="item.poster" alt="{{ item.title }}" loading="lazy">
+            </div>
+            <div class="title-container">
+                <span class="project-title">{{ item.title }}</span>
+                <div class="icon">
+                    <fa-icon *ngIf="item.liveLink" [icon]="faLink" class="fa-arrow"
+                        (click)="liveDemo(item.liveLink)"></fa-icon>
+                    <fa-icon *ngIf="item.gitHublink" [icon]="faGithub" class="fa-arrow"
+                        (click)="openCode(item.gitHublink)"></fa-icon>
+                </div>
+            </div>
+            <span class="project-domain">{{ item.domain }}</span>
         </div>
     </div>
-    <br>
-    <h3>Mobile App Projects</h3>
-    <div class="priject_container">
-        <div class="projects-card">
-            <span class="p-title">MyDocs - Backup android app</span>
-            <p>An Android application designed to back up your media files, such as photos, videos, and contact details. You can also keep your files secure by adding them to a private section for extra privacy.</p>
-            <ul type="square">
-                <li>Technologies:</li>
-                <span class="desc">Android Studio (Java) and Firebase</span>
-                <li>Database Used:</li>
-                <span class="desc">Firebase</span>
-                
-            </ul>
-            <b>App Features:</b>
-            <ul>
-                <li>End-to-End Encryption: <span class="desc">All data is securely stored with end-to-end encryption, ensuring your media files and personal information are protected.</span></li>
-                <li>Easy Login: <span class="desc">Quickly log in using your email ID for a seamless experience.</span></li>
-                <li>Responsive Media Playback:  <span class="desc">Enjoy smooth and responsive playback for videos and photos within the app.</span></li>
-            </ul>
+    <div class="project-items-details-container" *ngIf="isOpen">
+        <div class="project-details">
+            <div class="close"> <fa-icon [icon]="faTimes" class="close-icon" (click)="closeItemView()"></fa-icon></div>
+            <div class="project-viewer-wrapper" *ngIf="openProject">
+                <img [src]="openProject.poster" alt="poster" class="viewer-img">
+                <div class="title-container">
+                    <span class="project-title">{{ openProject.title }}</span>
+                    <div class="icon">
+                        <fa-icon *ngIf="openProject.liveLink" [icon]="faLink" class="fa-arrow"
+                            (click)="liveDemo(openProject.liveLink)"></fa-icon>
+                        <fa-icon *ngIf="openProject.gitHublink" [icon]="faGithub" class="fa-arrow"
+                            (click)="openCode(openProject.gitHublink)"></fa-icon>
+                    </div>
+                </div>
+                <span class="project-domain">{{ openProject.domain }}</span>
+                <span class="project-desc">{{ openProject.description }}</span>
+                <span class="project-tect-stack">Tech Stack</span>
+                <span class="project-desc">{{ openProject.techStack }}</span>
+                <a *ngIf="openProject.liveLink" [href]="openProject.liveLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a *ngIf="openProject.gitHublink" [href]="openProject.gitHublink" target="_blank" rel="noopener noreferrer">View Source Code On Github</a>
+            </div>
         </div>
-        <div class="projects-card">
-            <span class="p-title">MPlayer - Music Player</span>
-            <p>MPlayer is a simple, versatile, and user-friendly Music player android app built using React Native, a popular framework for developing cross-platform mobile applications.</p>
-            <ul type="square">
-                <li>Technologies:</li>
-                <span class="desc">JavaScript- React-Native</span>
-                <li>GitHub Link:</li>
-                <span class="desc"><a href="https://github.com/dilip12git/music_player" target="_blank">Music Player</a></span>
-            </ul>
-            <b>App Features:</b>
-            <ul>
-                <li>Local Music Library Access: <span class="desc">Automatically scans and accesses all music files stored on your device, allowing you to play your favorite tracks directly from your personal collection.</span></li>
-                <li>Favorites: <span class="desc">Easily add songs to your favorites list with a single tap, allowing you quick access to your most-loved tracks.</span></li>
-                <li>Background Play:<span class="desc"> Continue playing music while using other apps or when your screen is off.</span></li>
-            </ul>
-        </div>
+
     </div>
 </div>
