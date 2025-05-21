@@ -1,153 +1,686 @@
 <div class="container">
-    <header><span class="main-title">Resume</span></header>
-    <article class="resume">
-        <section class="timeline">
-            <div class="title-wrapper">
-                <div class="icon-box">
-                    <fa-icon [icon]="faBook"></fa-icon>
-                </div>
-                <h3 class="h3">Education</h3>
+  <header #targetElement><span class="main-title">Resume</span></header>
+
+  <article class="resume">
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <lucide-angular
+            [img]="graduationCap"
+            [size]="25"
+            class="luc-icon"
+            color="white"
+          ></lucide-angular>
+        </div>
+        <h3 class="h3">Education</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <div class="edu-info-wrapper">
+            <div class="edu-info">
+              <span class="degree_title">Bachelor of Technology</span>
+              <span class="degree_branch"
+                >Computer Science and Engineering (CGPA: 8.07)
+              </span>
             </div>
-
-            <ol class="timeline-list">
-                <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">
-                        Bharath Institute Of Higher Education & Research
-                    </h4>
-                    <span>2022 — 2026</span>
-                    <p class="timeline-text">
-                        B.Tech Computer Science & Engineering.
-                    </p>
-                </li>
-
-                <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Shree Susanskrit Secondary School</h4>
-                    <span>2020 — 2022</span>
-                    <p class="timeline-text">
-                        Intermediate, Computer Science
-                    </p>
-                </li>
-            </ol>
-        </section>
-
-        <section class="timeline">
-            <div class="title-wrapper">
-                <div class="icon-box">
-                    <fa-icon [icon]="faBook"></fa-icon>
-                </div>
-
-                <h3 class="h3">Experience</h3>
+            <div class="degree_completion_date_wrapper">
+              <lucide-angular
+                [img]="calender"
+                [size]="14"
+                class="luc-icon"
+              ></lucide-angular>
+              <span class="degree_completion_date">2022 - 2026</span>
             </div>
+          </div>
+          <div class="clg_info">
+            <span class="college_name"
+              >Bharath Institute of Higher Education and Research - Chennai,
+              Tamil Nadu, India</span
+            >
+            <span class="some_intro_txt"
+              >Currently pursuing degree with a focus on web and mobile app
+              development.</span
+            >
+          </div>
+          <div class="skills_wrapper">
+            <div class="learnt_skills">
+              <span class="skiils">Web Development</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Database Management</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Computer Networks</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Data Structures</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Data Analysis</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Mobile App Development</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Data Security</span>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="edu-info-wrapper">
+            <div class="edu-info">
+              <span class="degree_title">Higher Secondary Education</span>
+              <span class="degree_branch"
+                >Computer Science (Percentage: 82%)
+              </span>
+            </div>
+            <div class="degree_completion_date_wrapper">
+              <lucide-angular
+                [img]="calender"
+                [size]="14"
+                class="luc-icon"
+              ></lucide-angular>
+              <span class="degree_completion_date">2020 - 2022</span>
+            </div>
+          </div>
+          <div class="clg_info">
+            <span class="college_name"
+              >Shree Susanskrit Secondary School - Siddharthanagar, Rupandehi,
+              Nepal</span
+            >
+            <span class="some_intro_txt"
+              >Focused on Physics, Chemistry, Mathematics and Computer
+              Science</span
+            >
+          </div>
+          <div class="skills_wrapper">
+            <div class="learnt_skills">
+              <span class="skiils">Mathematics</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Chemistry</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Physics</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Web Development</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Database Management</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Computer Networks</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Computer Hardware</span>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="edu-info-wrapper">
+            <div class="edu-info">
+              <span class="degree_title">Secondary School Education</span>
+              <span class="degree_branch">Percentage: 97% </span>
+            </div>
+            <div class="degree_completion_date_wrapper">
+              <lucide-angular
+                [img]="calender"
+                [size]="14"
+                class="luc-icon"
+              ></lucide-angular>
+              <span class="degree_completion_date">2019 - 2020</span>
+            </div>
+          </div>
+          <div class="clg_info">
+            <span class="college_name"
+              >Shree Susanskrit Secondary School - Siddharthanagar, Rupandehi,
+              Nepal</span
+            >
+            <span class="some_intro_txt"
+              >Focused on Physics, Chemistry, Mathematics and Computer
+            </span>
+          </div>
+          <div class="skills_wrapper">
+            <div class="learnt_skills">
+              <span class="skiils">Mathematics</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Chemistry</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Physics</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Computer Science</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <div class="separator"></div>
 
-            <ol class="timeline-list">
-                <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Independent Web Developer</h4>
-                    <span>Self-employed | 2018 – Present</span>
-                    <p class="timeline-text">
-                        Developed various web applications
-                        using technologies such as Full Stack and MERN Stack.
-                    </p>
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <lucide-angular
+            [img]="experience"
+            [size]="25"
+            color="white"
+            class="luc-icon"
+          ></lucide-angular>
+        </div>
 
-                    <p class="timeline-text">
-                        Implemented responsive web designs and mobile-friendly interfaces to ensure optimal user
-                        experience across all devices.
-                    </p>
-                    <p class="timeline-text">Created and managed databases using SQL and MongoDB for backend support in
-                        web applications, improving data handling and storage efficiency.
-                    </p>
+        <h3 class="h3">Experience</h3>
+      </div>
 
-                </li>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <div class="edu-info-wrapper">
+            <div class="edu-info">
+              <span class="degree_title">Independent Web Developer </span>
+              <span class="degree_branch">As a Student </span>
+            </div>
+            <div class="degree_completion_date_wrapper">
+              <lucide-angular
+                [img]="calender"
+                [size]="14"
+                class="luc-icon"
+              ></lucide-angular>
+              <span class="degree_completion_date">2018 - Present</span>
+            </div>
+          </div>
+          <div class="clg_info">
+            <span class="Dev_intro">
+              Developed various web applications using technologies such as Full
+              Stack and MERN Stack. Implemented responsive web designs and
+              mobile-friendly interfaces to ensure optimal user experience
+              across all devices.
+              <br />
+              <br />
+              Created and managed databases using MySQL and MongoDB for backend
+              support in web applications, improving data handling and storage
+              efficiency.
+            </span>
+          </div>
+          <div class="skills_wrapper">
+            <div class="learnt_skills">
+              <span class="skiils">ReactJs</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">AngularJs</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">MYSQL</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">MongoDB</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Tailwind CSS</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">NodeJs</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">ExpressJs</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">GitHub</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Firebase</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">HTML </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">CSS </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">JavaScript </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">JQuery </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">PHP </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Cloudinary </span>
+            </div>
+          </div>
+        </li>
 
-                <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Independent Mobile App Developer</h4>
-                    <span>Self-employed | 2021 – Present</span>
+        <li class="timeline-item">
+          <div class="edu-info-wrapper">
+            <div class="edu-info">
+              <span class="degree_title"
+                >Independent Android App Developer
+              </span>
+              <span class="degree_branch">As a Student </span>
+            </div>
+            <div class="degree_completion_date_wrapper">
+              <lucide-angular
+                [img]="calender"
+                [size]="14"
+                class="luc-icon"
+              ></lucide-angular>
+              <span class="degree_completion_date">2021 - Present</span>
+            </div>
+          </div>
+          <div class="clg_info">
+            <span class="Dev_intro">
+              Designed and developed mobile applications using React Native and
+              Java for Android, focusing on performance, scalability, and
+              user-friendly interfaces. <br />
+              <br />
+              Integrated RESTful APIs and third-party libraries to extend
+              application functionality, demonstrating proficiency in handling
+              backend services and external integrations. Managed app deployment
+              and updates on Google Play Store, gaining hands-on experience in
+              the app release lifecycle and version control.
+            </span>
+          </div>
+          <div class="skills_wrapper">
+            <div class="learnt_skills">
+              <span class="skiils">React-Native</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Android</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Java</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">MongoDB</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Nativewind CSS</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">NodeJs</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">ExpressJs</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">GitHub</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Firebase</span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">XML </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Android Studio </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Java </span>
+            </div>
+            <div class="learnt_skills">
+              <span class="skiils">Cloudinary </span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-                    <p class="timeline-text">
-                        Designed and developed mobile applications using React Native and Java for Android, focusing on
-                        performance, scalability, and user-friendly interfaces.
-                    </p>
-                    <p class="timeline-text">Integrated RESTful APIs and third-party libraries to extend application
-                        functionality, demonstrating proficiency in handling backend services and external integrations.
-                    </p>
-                    <p class="timeline-text">Managed app deployment and updates on Google Play Store, gaining hands-on
-                        experience in the app release lifecycle and version control.</p>
-                </li>
-            </ol>
-        </section>
+    <div class="separator"></div>
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <lucide-angular
+            [img]="skill"
+            [size]="25"
+            color="white"
+            class="luc-icon"
+          ></lucide-angular>
+        </div>
 
-        <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
+        <div class="skill-title">
+          <span class="sk-title">Skills & Expertise</span>
+          <span class="sk-intro"
+            >Turning Ideas into Impact with these Skills.</span
+          >
+        </div>
+      </div>
 
-            <ul class="skills-list content-card">
-
-                <li class="skills-item">
-                    <div class="title-wrapper">
-                        <div class="title_desc_wrapper">
-                            <span class="h5">Web Development -
-                                <data value="85">85%</data>
-                            </span>
-                            <span class="desc">Knowledge of HTML, CSS, and JavaScript frameworks (ReactJs,
-                                AngularJs)</span>
-                        </div>
-
-                    </div>
-
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill" style="width: 85%"></div>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="title-wrapper">
-                        <div class="title_desc_wrapper">
-                            <span class="h5">Mobile Application Development -
-                                <data value="75">75%</data>
-                            </span>
-                            <span class="desc">Skills in developing applications for Android (Java) and cross-platform
-                                tool React Native.</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill" style="width: 75%"></div>
-                    </div>
-                </li>
-
-                <li class="skills-item">
-                    <div class="title-wrapper">
-                        <div class="title_desc_wrapper">
-                            <span class="h5">Database Management -
-                                <data value="70">70%</data>
-                            </span>
-                            <span class="desc">Understanding of SQL databases (MySQL) and MongoDB.</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill" style="width: 70%"></div>
-                    </div>
-                </li>
-
-                <li class="skills-item">
-                    <div class="title-wrapper">
-                        <div class="title_desc_wrapper">
-                            <span class="h5">Programming Languages -
-                                <data value="80">80%</data>
-                            </span>
-                            <span class="desc">Proficiency in languages like Java, Python, JavaScript, C, C++ and
-                                PHP.</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill" style="width: 80%"></div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <a href="../../../assets/resume/Dilip_resume.pdf" class="download-resume-btn" download="Dilip_resume.pdf">
-            Download Resume
-            <fa-icon [icon]="faDownload"></fa-icon>
-        </a>
-    </article>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <div class="edu-info">
+            <span class="degree_title">Programming Languages</span>
+          </div>
+          <div class="sk-item">
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/c.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">C Programming</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/cpp.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">C++</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/java.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Java</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/py.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Python</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/js.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">JavaScript</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/php.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">PHP</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/sql.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">SQL</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/java.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Data Structure</span>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="edu-info">
+            <span class="degree_title">Frontend & Libraries</span>
+          </div>
+          <div class="sk-item">
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/reactjs.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">ReactJs</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/angular.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">AngularJs</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/react-native.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">React-Native</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/android.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Android</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/android-studio.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Android Studio</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/html.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">HTML</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/css.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">CSS</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/tailwind.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Tailwind CSS</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/js.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">JavaScript</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/redux.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Redux</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/context.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">React Context</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/jquery.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">JQuery</span>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="edu-info">
+            <span class="degree_title">Backend</span>
+          </div>
+          <div class="sk-item">
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/nodejs.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">NodeJs</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/php.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">PHP</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/expressjs.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">ExpressJs</span>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="edu-info">
+            <span class="degree_title">Databases</span>
+          </div>
+          <div class="sk-item">
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/sql.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">MySQL</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/mgdb.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">MongoDB</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/firebase.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Firebase</span>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="edu-info">
+            <span class="degree_title">Tools & Technologies</span>
+          </div>
+          <div class="sk-item">
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/git.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Git</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/github.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">GitHub</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/redux.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Redux</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/context.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">React Context</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/firebase.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Firebase</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/railway.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Railway</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/canva.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Canva</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/vscode.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">VS Code</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/android-studio.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Android Studio</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/postman.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Postman</span>
+            </div>
+            <div class="sk-item-text-wrp">
+              <img
+                src="../../../assets/lang-icon/cloudinary.png"
+                alt=""
+                class="lang-img-icon"
+              />
+              <span class="sk-item-txt">Cloudinary</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </article>
 </div>

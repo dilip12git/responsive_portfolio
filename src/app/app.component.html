@@ -1,49 +1,81 @@
 <main>
-  <aside class="sidebar" [ngClass]="{'active': isSidebarActive}">
+  <aside class="sidebar">
     <div class="sidebar-info">
       <figure class="avatar-box">
-        <img src="../assets/img/dilip-img.png" alt="Dilip Kumar Teli" width="80" style="border-radius: 20%;" />
+        <img
+          src="../assets/img/dilip-img1.jpg"
+          alt="Dilip Kumar Teli"
+          width="80"
+          class="faded-sides"
+        />
       </figure>
 
       <div class="info-content">
-        <span class="name" title="Dilip Kumar Teli">Dilip Kumar Teli</span>
+        <div class="info_name_content">
+          <span class="name" title="Dilip Kumar Teli">Dilip Kumar Teli</span>
+          <div
+            class="toggle-sidebar-more"
+            (click)="isSidebarOpen = !isSidebarOpen"
+          >
+            <span>Info</span>
+            <lucide-angular
+              [img]="angle"
+              [size]="14"
+              class="my-icon toggle-icon"
+              [class.rotated]="isSidebarOpen"
+            ></lucide-angular>
+          </div>
+        </div>
         <p class="title">Web and Mobile App Developer</p>
       </div>
-
-      <button class="info_more-btn" (click)="toggleInfoVisibility()">
-        <span>Show Contacts</span>
-        <fa-icon [icon]="faChevronDown" class="fa-chervon-icon"></fa-icon>
-      </button>
     </div>
-    <div class="sidebar-info_more"  [ngClass]="{'active': isSidebarActive}">
+    <!-- <div class="separator"></div> -->
+
+    <div
+      class="sidebar-info_more"
+      [class.open]="isSidebarOpen"
+      [class.closed]="!isSidebarOpen && windowWidth <= 767"
+    >
       <div class="separator"></div>
 
       <div class="contacts-list">
-        <div class="contact-item">
+        <div class="contact-item email-wrpr" (click)="openEmail()">
           <div class="icon-box">
-            <fa-icon [icon]="faEnvelope" class="fa-email-icon"></fa-icon>
+            <lucide-angular
+              [img]="email"
+              [size]="18"
+              class="my-icon"
+            ></lucide-angular>
           </div>
 
           <div class="contact-info">
             <p class="contact-title">Email</p>
-            <span class="contact-link">dilipg44u&#64;gmail.com</span>
+            <span class="contact-link email-link">dilipg44u&#64;gmail.com</span>
           </div>
         </div>
 
-        <div class="contact-item">
+        <div class="contact-item email-wrpr" (click)="makeCall()">
           <div class="icon-box">
-            <fa-icon [icon]="faPhone" class="fa-phone-icon"></fa-icon>
+            <lucide-angular
+              [img]="phone"
+              [size]="18"
+              class="my-icon"
+            ></lucide-angular>
           </div>
 
           <div class="contact-info">
             <p class="contact-title">Phone</p>
-            <span class="contact-link">+91 7991907185</span>
+            <span class="contact-link email-link">+91 7991907185</span>
           </div>
         </div>
 
         <div class="contact-item">
           <div class="icon-box">
-            <fa-icon [icon]="faCalendar" class="fa-calendar-icon"></fa-icon>
+            <lucide-angular
+              [img]="calender"
+              [size]="18"
+              class="my-icon"
+            ></lucide-angular>
           </div>
 
           <div class="contact-info">
@@ -55,7 +87,11 @@
 
         <div class="contact-item">
           <div class="icon-box">
-            <fa-icon [icon]="faLocation" class="fa-location-icon"></fa-icon>
+            <lucide-angular
+              [img]="location"
+              [size]="18"
+              class="my-icon"
+            ></lucide-angular>
           </div>
 
           <div class="contact-info">
@@ -69,26 +105,48 @@
 
       <div class="social-list">
         <div class="social-item">
-          <a href="https://www.linkedin.com/in/dilipgpta/" target="_blank" class="social-link">
-            <fa-icon [icon]="linkedin" class="fa-location-icon"></fa-icon>
+          <a
+            href="https://www.linkedin.com/in/dilipgpta/"
+            target="_blank"
+            class="social-link"
+          >
+            <img
+              src="../assets/lang-icon/linkedIN.png"
+              alt=""
+              class="social-icon"
+            />
           </a>
         </div>
         <div class="social-item">
-          <a href="https://www.facebook.com/dilip8513gupta" class="social-link" target="_blank">
-            <fa-icon [icon]="facebook" class="fa-location-icon"></fa-icon>
+          <a
+            href="https://www.instagram.com/dilipgupta_4u"
+            class="social-link"
+            target="_blank"
+          >
+            <img
+              src="../assets/lang-icon/insta.png"
+              alt=""
+              class="social-icon"
+            />
           </a>
         </div>
-
         <div class="social-item">
-          <a href="https://www.instagram.com/dilipgupta_4u" class="social-link" target="_blank">
-            <fa-icon [icon]="insta" class="fa-location-icon"></fa-icon>
+          <a
+            href="https://www.facebook.com/dilip8513gupta"
+            class="social-link"
+            target="_blank"
+          >
+            <img src="../assets/lang-icon/fb.png" alt="" class="social-icon" />
           </a>
         </div>
 
         <div class="social-item">
           <a href="https://github.com/dilip12git" class="social-link" download>
-            <fa-icon [icon]="github" class="fa-location-icon"></fa-icon>
-
+            <img
+              src="../assets/lang-icon/github.png"
+              alt=""
+              class="social-icon"
+            />
           </a>
         </div>
       </div>
@@ -97,18 +155,99 @@
 
   <div class="main-content">
     <nav class="navbar">
-      <button class="navbar-link " routerLinkActive="active_nav" routerLink=""
-        [routerLinkActiveOptions]="{ exact: true }">About</button>
-      <button class="navbar-link " routerLinkActive="active_nav" routerLink="projects"
-        [routerLinkActiveOptions]="{ exact: true }">Projects</button>
-      <button class="navbar-link" routerLinkActive="active_nav" routerLink="resume"
-        [routerLinkActiveOptions]="{ exact: true }">Resume</button>
-      <button class="navbar-link" routerLinkActive="active_nav" routerLink="contact"
-      [routerLinkActiveOptions]="{ exact: true }">Contact</button>
+      <button
+        class="navbar-link"
+        routerLinkActive="active_nav"
+        routerLink=""
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="m-icon-wrapper">
+          <lucide-angular
+            [img]="userIcon"
+            [size]="18"
+            class="my-icon"
+          ></lucide-angular>
+        </div>
+        <span>About</span>
+      </button>
+      <button
+        class="navbar-link"
+        routerLinkActive="active_nav"
+        routerLink="resume"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="m-icon-wrapper">
+          <lucide-angular
+            [img]="resume"
+            [size]="18"
+            class="my-icon"
+          ></lucide-angular>
+        </div>
+
+        <span>Resume</span>
+      </button>
+      <button
+        class="navbar-link"
+        routerLinkActive="active_nav"
+        routerLink="projects"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="m-icon-wrapper">
+          <lucide-angular
+            [img]="projectIcon"
+            [size]="18"
+            class="my-icon"
+          ></lucide-angular>
+        </div>
+        <span>Projects</span>
+      </button>
+      <button
+        class="navbar-link"
+        routerLinkActive="active_nav"
+        routerLink="contact"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="m-icon-wrapper">
+          <lucide-angular
+            [img]="contactIcon"
+            [size]="18"
+            class="my-icon"
+          ></lucide-angular>
+        </div>
+        <span>Contacts</span>
+      </button>
     </nav>
     <article>
       <router-outlet></router-outlet>
     </article>
+  </div>
 
+  <div class="background-lights">
+    <div
+      *ngFor="let light of lights"
+      class="light"
+      [ngStyle]="{
+        top: light.top + '%',
+        left: light.left + '%',
+        width: light.size + 'px',
+        height: light.size + 'px',
+        background: light.color,
+        animationDuration:
+          light.floatDuration + 's, ' + light.pulseDuration + 's',
+        animationDelay: light.delay + 's, ' + light.delay + 's'
+      }"
+    ></div>
+    <div class="stars-container">
+      <div
+        class="star"
+        *ngFor="let star of stars"
+        [ngStyle]="{
+          left: star.left + '%',
+          animationDuration: star.duration + 's',
+          animationDelay: star.delay + 's',
+          '--drift': star.drift + 'px'
+        }"
+      ></div>
+    </div>
   </div>
 </main>

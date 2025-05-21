@@ -1,44 +1,48 @@
 <div class="container">
-    <header><span class="main-title">Projects</span></header>
-    <div class="projects">
-        <div class="project-item" *ngFor="let item of items">
-            <div class="project-img" (click)="viewDetail(item)">
-                <img [src]="item.poster" alt="{{ item.title }}" loading="lazy">
-            </div>
-            <div class="title-container">
-                <span class="project-title">{{ item.title }}</span>
-                <div class="icon">
-                    <fa-icon *ngIf="item.liveLink" [icon]="faLink" class="fa-arrow"
-                        (click)="liveDemo(item.liveLink)"></fa-icon>
-                    <fa-icon *ngIf="item.gitHublink" [icon]="faGithub" class="fa-arrow"
-                        (click)="openCode(item.gitHublink)"></fa-icon>
-                </div>
-            </div>
-            <span class="project-domain">{{ item.domain }}</span>
+  <header #targetElement><span class="main-title">Projects</span></header>
+  <div class="projects">
+    <div class="project-item" *ngFor="let item of items">
+      <div class="project-img" (click)="viewDetail(item)">
+        <img
+          *ngIf="item.posters?.length"
+          [src]="item.posters[0]"
+          alt="{{ item.title }}"
+          loading="lazy"
+        />
+      </div>
+      <div class="title-container" (click)="viewDetail(item)">
+        <span class="project-title">{{ item.title }}</span>
+        <div class="icon">
+          <fa-icon
+            *ngIf="item.liveLink"
+            [icon]="faLink"
+            class="fa-icon"
+            (click)="liveDemo(item.liveLink); $event.stopPropagation()"
+          ></fa-icon>
+          <fa-icon
+            *ngIf="item.gitHublink"
+            [icon]="faGithub"
+            class="fa-icon"
+            (click)="openCode(item.gitHublink); $event.stopPropagation()"
+          ></fa-icon>
         </div>
-    </div>
-    <div class="project-items-details-container" *ngIf="isOpen">
-        <div class="project-details">
-            <div class="close"> <fa-icon [icon]="faTimes" class="close-icon" (click)="closeItemView()"></fa-icon></div>
-            <div class="project-viewer-wrapper" *ngIf="openProject">
-                <img [src]="openProject.poster" alt="poster" class="viewer-img">
-                <div class="title-container">
-                    <span class="project-title">{{ openProject.title }}</span>
-                    <div class="icon">
-                        <fa-icon *ngIf="openProject.liveLink" [icon]="faLink" class="fa-arrow"
-                            (click)="liveDemo(openProject.liveLink)"></fa-icon>
-                        <fa-icon *ngIf="openProject.gitHublink" [icon]="faGithub" class="fa-arrow"
-                            (click)="openCode(openProject.gitHublink)"></fa-icon>
-                    </div>
-                </div>
-                <span class="project-domain">{{ openProject.domain }}</span>
-                <span class="project-desc">{{ openProject.description }}</span>
-                <span class="project-tect-stack">Tech Stack</span>
-                <span class="project-desc">{{ openProject.techStack }}</span>
-                <a *ngIf="openProject.liveLink" [href]="openProject.liveLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a *ngIf="openProject.gitHublink" [href]="openProject.gitHublink" target="_blank" rel="noopener noreferrer">View Source Code On Github</a>
-            </div>
+      </div>
+      <span (click)="viewDetail(item)" class="project-domain">{{
+        item.descriptions[0]
+      }}</span>
+      <div class="lang-wrapper">
+        <div *ngFor="let l of item.lang" class="lang-icon-item">
+          <img
+            [src]="l.icon"
+            [alt]="l.name"
+            width="18"
+            height="18"
+            class="lang-icon"
+          />
+          <span class="lang-name">{{ l.name }}</span>
         </div>
-
+      </div>
     </div>
+  </div>
+  <div class="project-items-details-container" *ngIf="isOpen"></div>
 </div>

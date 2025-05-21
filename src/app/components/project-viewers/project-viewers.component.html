@@ -1,0 +1,77 @@
+<div class="container" #targetElement>
+  <header><span class="main-title">Projects</span></header>
+  <div class="project-viewer-wrapper" *ngIf="project">
+    <div class="project-viewer-title-container">
+      <fa-icon
+        [icon]="faArrowLeft"
+        class="fa-left-arrow"
+        (click)="goBack()"
+      ></fa-icon>
+      <span class="project-title">{{ project.title }}</span>
+    </div>
+
+    <img [src]="project.posters[2]" alt="poster" class="viewer-img" />
+
+    <div class="links-wrapper">
+      <div
+        class="link-btn"
+        *ngIf="project.liveLink"
+        (click)="liveDemo(project.liveLink)"
+      >
+        <span>Live Demo</span>
+        <fa-icon [icon]="faLink" class="fa-icon"></fa-icon>
+      </div>
+      <div
+        class="link-btn"
+        *ngIf="project.gitHublink"
+        (click)="openCode(project.gitHublink)"
+      >
+        <span>GitHub</span>
+
+        <fa-icon [icon]="faGithub" class="fa-icon"></fa-icon>
+      </div>
+      <div class="link-btn" (click)="shareProjectLink()">
+        <span>Share</span>
+        <fa-icon [icon]="faShare" class="fa-icon"></fa-icon>
+      </div>
+    </div>
+
+    <div class="project-details-wrapper">
+      <div class="details-wrapper">
+        <span class="p-title">{{ project.title }}</span>
+        <br /><br />
+        <ul class="desc" type="none">
+          <li *ngFor="let desc of project.descriptions">{{ desc }}</li>
+        </ul>
+      </div>
+      <div class="details-wrapper">
+        <img [src]="project.posters[0]" alt="" class="p-details-img" />
+      </div>
+    </div>
+
+    <div class="project-details-wrapper pdw">
+      <div class="details-wrapper">
+        <img [src]="project.posters[1]" alt="" class="p-details-img" />
+      </div>
+      <div class="details-wrapper">
+        <span class="p-title">Features</span>
+        <ol class="features" type="1">
+          <li *ngFor="let feature of project.features">{{ feature }}</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="project-details-wrapper">
+      <div class="details-wrapper">
+        <span class="p-title">Tech Stack</span>
+        <ol class="features" type="1">
+          <li *ngFor="let tech of project.techStack">{{ tech }}</li>
+        </ol>
+      </div>
+      <div class="details-wrapper">
+        <img [src]="project.posters[3]" alt="" class="p-details-img" />
+      </div>
+    </div>
+    <!-- <p class="desc">{{ project.moreDesc }}</p> -->
+  </div>
+</div>

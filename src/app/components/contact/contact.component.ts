@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 import { NgForm } from '@angular/forms';
-import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -24,40 +23,26 @@ export class ContactComponent {
     window.scrollTo(0, 0); 
   }
   faLocationArrow = faLocationArrow;
-  userEmail: string = '';
-  subject: string = '';
-  message: string = '';
   userName: string = '';
-  success:boolean=false;
-  onSubmit(form: NgForm) {
-    if (form.valid) {
-      this.sendEmail();
-      setTimeout(() => {
-        form.reset();
-      }, 3000);
-     
-    } else {
-    }
-  }
-  sendEmail() {
-    const templateParams = {
-      user_email: this.userEmail,
-      from_name: this.userName,
-      to_name: 'Dilip Gupta',
-      message: this.message,
-      reply_to: this.userEmail
-    };
+  userEmail: string = '';
+  message: string = '';
+  success: boolean = false;
+  error: boolean = false;
+  showErrors: boolean = false; 
 
-    // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'PUBLIC_API_KEY')
-    emailjs.send('id_emailjs143', 'tem_id400emailjs', templateParams, 'gRRiBavpZ1Ofn1w0X')
-      .then(response => {
-        this.success=true;
-        setTimeout(() => {
-          this.success=false
-        }, 3000);
-      })
-      .catch(error => {
-        this.success=false;
-      });
+  onSubmit(form: NgForm) {
+    this.showErrors = true; 
+
+    if (form.invalid) return; 
+
+    const mailtoLink = `mailto:dilipg44u@gmail.com?subject=Inquiry from Portfolio&body=Hello Dilip,%0D%0A%0D%0A %0D%0A%0D%0A${encodeURIComponent(this.message)}`;
+
+    window.location.href = mailtoLink;
+
+    this.success = true;
+    this.error = false;
+
+    form.resetForm();
+    this.showErrors = false; 
   }
 }

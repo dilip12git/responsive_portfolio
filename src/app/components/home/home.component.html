@@ -1,56 +1,40 @@
 <div class="container">
-    <header><span class="main-title">About Me</span></header>
-    <p>Hello! I’m <span class="dev_name">Dilip Kumar</span>, a dedicated web and Android developer from Nepal, currently completing a B.Tech in Computer Science Engineering at <b>Bharath University</b> in Chennai, India.</p>
-    <p>
-        My journey began with core web technologies like <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>, eventually leading me to frameworks such as <b>AngularJS</b>, <b>ReactJS</b>, and <b>React Native</b> to build dynamic user experiences.
-    </p>
-    <span class="title-txt">Expanding My Skillset</span>
-    <p>
-        I expanded into Android development, mastering Java and React Native for versatile, cross-platform solutions. With additional expertise in C, C++, and SQL, I possess a strong grasp of diverse programming paradigms and data management. I’m always exploring new technologies to stay ahead in this evolving field.
-    </p>
-    
-    <h2>What i'm doing</h2>
-    <div class="skills_container">
-        <div class="skils_card">
-            <img src="../../../assets/img/code_icon.svg"
-            width="120"
-             alt="Web Development">
-            <div class="skills_info">
-                <span class="skill_title">Programming Languages</span>
-                <span class="skill_desc">Proficiency in languages like Java, Python, JavaScript, C,  C++ and PHP.</span>
-            </div>
-        </div>
-        <div class="skils_card">
-            <img src="../../../assets/img/web_icon.svg"
-            width="120"
-            alt="Web Development">
-            <div class="skills_info">
-                <span class="skill_title">Web Development</span>
-                <span class="skill_desc">Knowledge of Full Stack and MERN stack web development</span>
-            </div>
-        </div>
-        <div class="skils_card">
-            <img src="../../../assets/img/mobile_icon.svg"
-            width="120"
-             alt="Web Development">
-            <div class="skills_info">
-                <span class="skill_title">Mobile Development</span>
-                <span class="skill_desc">Skills in developing applications for Android (Java) and cross-platform tool React Native.</span>
-            </div>
-        </div>
-        <div class="skils_card">
-            <img src="../../../assets/img/db_icon.svg" 
-            width="120"
-            alt="Web Development">
-            <div class="skills_info">
-                <span class="skill_title">Database Management</span>
-                <span class="skill_desc">Understanding of SQL databases (MySQL) and MongoDB.</span>
-            </div>
-        </div>
-       
-       
+  <div class="dev_info_wrapper">
+    <div class="dev_intro_wrapper">
+      <span class="hello-title">Hello! I'm</span>
+      <span class="abt-name">Dilip <span class="kmr">Kumar</span></span>
+      <span class="abt-title">Passionate Web and Mobile App Developer</span>
     </div>
 
-
-
+    <span class="abt-description">
+      Building elegant solutions to complex problems with modern technologies,
+      focusing on clean design, high performance, and user-friendly experiences
+      that make software more efficient, scalable, and easy to maintain.
+    </span>
+    <div class="btns-wrapper">
+      <a
+        href="../../../assets/resume/Dilip_resume.pdf"
+        download="Dilip_resume.pdf"
+        target="_blank"
+        class="resume_download_button"
+      >
+        <span class="btn-text">Resume</span>
+        <lucide-angular
+          [img]="download"
+          [size]="18"
+          class="my-icon"
+        ></lucide-angular
+      ></a>
+      <a
+        class="view_project_button btn-ouline"
+          routerLink="projects"
+        >View Projects
+        <lucide-angular
+          [img]="arrow"
+          [size]="18"
+          class="my-icon"
+        ></lucide-angular>
+      </a>
+    </div>
+  </div>
 </div>
