@@ -2,15 +2,17 @@
 [Live Link](https://dilip-kumar-portfolio.web.app/)
 
 
-![Screenshot 2024-08-30 010421](https://github.com/user-attachments/assets/a524ece3-dc36-4179-bbe8-82012a897c99)
 
+
+![Screenshot 2025-05-21 211051](https://github.com/user-attachments/assets/5472a84a-d3fd-490e-bcb2-959c19cf4719)
 
 Overview:
 
 This responsive portfolio showcases the power of Angular in creating dynamic, modern, and visually appealing web applications. Designed to highlight professional achievements, projects, and skills, this portfolio demonstrates a clean and user-friendly interface, optimized for both desktop and mobile devices.
 
 
-![Screenshot 2024-08-30 010445](https://github.com/user-attachments/assets/f7acc010-d272-4224-9f4a-1975da9f02fa)
+
+![Screenshot 2025-05-21 211123](https://github.com/user-attachments/assets/164ad235-1ddf-49ff-8732-a44d027de310)
 
 # Features:
 
@@ -29,6 +31,7 @@ Customizable Themes: Features a customizable design with various themes and colo
 SEO-Friendly: Incorporates Angular Universal for server-side rendering (SSR), improving search engine optimization (SEO) and ensuring better visibility for search engines.
 
 Email Integration: Utilizes EmailJS, a third-party API service, to handle email communications directly from the portfolio. This feature enables users to send messages, inquiries, or contact forms seamlessly without needing a backend server.
+![Screenshot 2025-05-21 211145](https://github.com/user-attachments/assets/58ffd756-9d76-4a1e-b0b7-80aac8c7b2bb)
 
 # Technologies Used:
 
@@ -45,7 +48,8 @@ RxJS: To manage asynchronous data streams and improve performance.
 Angular CLI: For project scaffolding, development, and build optimization.
 
 EmailJS: To send emails directly from the client-side application using a third-party API service.
-![Screenshot 2024-08-30 010329](https://github.com/user-attachments/assets/ff7bb45b-168c-4924-9e3d-76c2e02dccba)
+
+![Screenshot 2025-05-21 211145](https://github.com/user-attachments/assets/043b0f7d-8310-41c8-9ee1-4ac90564e82b)
 
 # Project Highlights:
 Dynamic Content Management: Easily manage and update project details, achievements, and other content using Angular’s data binding and services.
@@ -54,6 +58,7 @@ User Interaction: Enhance user engagement with interactive elements and smooth t
 Email Functionality: Streamline communication by integrating EmailJS to handle user inquiries and messages directly from the portfolio.
 Scalability: Designed to grow with additional features, projects, or sections as needed.
 This portfolio not only highlights your skills and projects but also demonstrates your proficiency in Angular and modern web development practices. The integration of EmailJS adds a convenient and effective way to manage communications, providing a complete and polished presentation of your work.
+![Screenshot 2025-05-21 211214](https://github.com/user-attachments/assets/de71b0d1-3115-4d97-9e9f-d5b5d66181ea)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
