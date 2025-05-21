@@ -30,6 +30,7 @@ export class ContactComponent {
   error: boolean = false;
   showErrors: boolean = false; 
 
+<<<<<<< HEAD
   onSubmit(form: NgForm) {
     this.showErrors = true; 
 
@@ -44,5 +45,17 @@ export class ContactComponent {
 
     form.resetForm();
     this.showErrors = false; 
+=======
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'PUBLIC_API_KEY')
+      .then(response => {
+        this.success=true;
+        setTimeout(() => {
+          this.success=false
+        }, 3000);
+      })
+      .catch(error => {
+        this.success=false;
+      });
+>>>>>>> 07360584accc4511333d45a94b2bbdd27ceb1f37
   }
 }
